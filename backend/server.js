@@ -14,7 +14,6 @@ const initServer = async () => {
 
     app.listen(PORT, () => {
       console.log(`Server started on port ${PORT}`);
-      console.log(`API at http://localhost:${PORT}/api`);
     });
   } catch (e) {
     console.error(e);
