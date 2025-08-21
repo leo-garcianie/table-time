@@ -18,8 +18,13 @@ dotenv.config();
 const app = express();
 
 // Middlewares
-app.use(cors());
+app.use(cors({
+    origin: "https://table-time-ckcc.onrender.com",
+    credentials: true,
+}));
 app.use(express.json());
+
+app.set("trust proxy", 1);
 
 // Routes
 app.use("/api/auth", authRoutes);
